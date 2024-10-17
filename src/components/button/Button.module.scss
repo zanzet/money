@@ -1,0 +1,13 @@
+.btn {
+    padding: 10px 30px;
+    background-color: var(--blue);
+    border: none;
+    color: var(--white);
+    transform: skew(-30deg, 0deg);
+    border-radius: 6px;
+    box-shadow: 4px 4px 4px #00000024;
+}
+
+.text {
+    transform: skewX(30deg);
+}

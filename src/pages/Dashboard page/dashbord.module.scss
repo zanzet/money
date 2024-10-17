@@ -1,0 +1,29 @@
+.dashboard {
+    padding: 80px 20px;
+
+    &__summary {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+}
+
+
+.summary__item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+}
+
+.dashboard__transactions {
+    margin-top: 20px;
+}
+
+.transaction__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
