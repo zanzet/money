@@ -3,7 +3,7 @@ import style from './augh.module.scss';
 import { Btn, Htag, Input } from '../../components';
 
 
-export const AughPage: React.FC = () => {
+export const AughPage = () => {
     return (
         <div className={style.wrapp}>
             <div className={style.wrapp__log}>

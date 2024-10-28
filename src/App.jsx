@@ -3,7 +3,7 @@ import './App.scss';
 import React from 'react';
 
 import { AughPage } from './pages/Auth page/Augh';
-import { Header } from './components';
+import { Form, Header } from './components';
 import { Dashboard } from './pages/Dashboard page/Dashbord';
 
 const transactions = [
@@ -12,7 +12,40 @@ const transactions = [
   { id: 3, category: 'Salary', amount: 1500.0, description: 'October salary', date: '2024-10-01' }
 ];
 
-const App: React.FC = () => {
+const categories = [
+  {
+    id: 1,
+    name: "Food",
+    type: "expense"
+  },
+  {
+    id: 2,
+    name: "Transport",
+    type: "expense"
+  },
+  {
+    id: 3,
+    name: "Salary",
+    type: "income"
+  },
+  {
+    id: 4,
+    name: "Entertainment",
+    type: "expense"
+  },
+  {
+    id: 5,
+    name: "Movies",
+    type: "expense"
+  },
+  {
+    id: 6,
+    name: "Sports",
+    type: "expense"
+  }
+]
+
+const App = () => {
   return (
     <>
       <Header />
@@ -23,7 +56,6 @@ const App: React.FC = () => {
         expenses={70.75}
         transactions={transactions}
       />
-
     </>
   );
 };

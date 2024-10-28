@@ -1,6 +1,15 @@
 .dashboard {
     padding: 80px 20px;
 
+    & h1 {
+        color: var(--ligthGrey);
+    }
+
+    & h2,
+    p {
+        color: var(--white);
+    }
+
     &__summary {
         display: flex;
         justify-content: space-between;
@@ -10,7 +19,7 @@
 
 
 .summary__item {
-    background-color: #f4f4f4;
+    background-color: var(--blue);
     padding: 20px;
     border-radius: 8px;
     width: 30%;
@@ -25,5 +34,9 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--blue);
+
+    & span {
+        color: var(--ligthGrey)
+    }
 }

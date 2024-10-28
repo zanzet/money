@@ -2,7 +2,7 @@ import React from 'react'
 import style from './Header.module.scss'
 import { Htag } from '../Htag/Htag'
 
-export const Header: React.FC = () => {
+export const Header = () => {
     return (
         <header className={style.header}>
             <div className={style.header__h1}>
