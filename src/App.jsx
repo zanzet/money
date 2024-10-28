@@ -1,10 +1,9 @@
 import './App.scss';
 
 import React from 'react';
+import { AddTransaction } from './pages/index';
 
-import { AughPage } from './pages/Auth page/Augh';
-import { Form, Header } from './components';
-import { Dashboard } from './pages/Dashboard page/Dashbord';
+
 
 const transactions = [
   { id: 1, category: 'Food', amount: 50.75, description: 'Groceries', date: '2024-10-10' },
@@ -48,14 +47,15 @@ const categories = [
 const App = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {/* <AughPage /> */}
-      <Dashboard
+      {/* <Dashboard
         balance={1429.25}
         income={1500.00}
         expenses={70.75}
         transactions={transactions}
-      />
+      /> */}
+      <AddTransaction transactions={transactions} />
     </>
   );
 };
