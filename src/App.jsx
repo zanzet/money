@@ -1,7 +1,7 @@
 import './App.scss';
 
 import React from 'react';
-import { AddTransaction, AughPage, Dashboard, ExpenseCategories } from './pages/index';
+import { AddTransaction, AughPage, Dashboard, ExpenseCategories, Page404 } from './pages/index';
 import { Header } from './components';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -64,6 +64,7 @@ const App = () => {
           />
           <Route path='/add' element={<AddTransaction transactions={transactions} />} />
           <Route path='/expensecategories' element={<ExpenseCategories />} />
+          <Route path='*' element={<Page404 />} />
 
         </Routes>
 

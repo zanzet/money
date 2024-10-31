@@ -12,7 +12,7 @@ export const Header = () => {
             </div>
             <div className={style.header__wrapp}>
                 <ul>
-                    <li className={style.header__wrapp_link}>Андрій</li>
+                    <Link to='/dashbord' className={style.header__wrapp_link}>Андрій</Link>
                     <li className={style.header__wrapp_link}>/</li>
                     <Link to='/' className={style.header__wrapp_link}>Вихід</Link>
                 </ul>
