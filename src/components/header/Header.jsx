@@ -1,6 +1,8 @@
 import React from 'react'
 import style from './Header.module.scss'
 import { Htag } from '../Htag/Htag'
+import { Link } from 'react-router-dom'
+
 
 export const Header = () => {
     return (
@@ -12,7 +14,7 @@ export const Header = () => {
                 <ul>
                     <li className={style.header__wrapp_link}>Андрій</li>
                     <li className={style.header__wrapp_link}>/</li>
-                    <li className={style.header__wrapp_link}>Вихід</li>
+                    <Link to='/' className={style.header__wrapp_link}>Вихід</Link>
                 </ul>
             </div>
         </header>

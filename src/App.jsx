@@ -1,7 +1,11 @@
 import './App.scss';
 
 import React from 'react';
-import { AddTransaction } from './pages/index';
+import { AddTransaction, AughPage, Dashboard, ExpenseCategories } from './pages/index';
+import { Header } from './components';
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 
 
@@ -46,17 +50,25 @@ const categories = [
 
 const App = () => {
   return (
-    <>
-      {/* <Header /> */}
-      {/* <AughPage /> */}
-      {/* <Dashboard
-        balance={1429.25}
-        income={1500.00}
-        expenses={70.75}
-        transactions={transactions}
-      /> */}
-      <AddTransaction transactions={transactions} />
-    </>
+    <Router>
+      <div className='app'>
+        <Header />
+        <Routes>
+          <Route path='/' element={<AughPage />} />
+
+          <Route path='/dashbord' element={< Dashboard
+            balance={1429.25}
+            income={1500.00}
+            expenses={70.75}
+            transactions={transactions} />}
+          />
+          <Route path='/add' element={<AddTransaction transactions={transactions} />} />
+          <Route path='/expensecategories' element={<ExpenseCategories />} />
+
+        </Routes>
+
+      </div>
+    </Router>
   );
 };
 
