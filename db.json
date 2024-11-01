@@ -2,68 +2,101 @@
     "users": [
         {
             "id": 1,
-            "email": "user@example.com",
-            "password": "password123", 
-            "created_at": "2024-10-11T10:00:00Z"
-        }
-    ],
-    "categories": [
-        {
-            "id": 1,
-            "name": "Food",
-            "type": "expense"
+            "name": "Alice",
+            "password": "123", 
+            "balance": 1500.0,
+            "categories": [
+                {
+                    "id": 1,
+                    "name": "Salary",
+                    "type": "income",
+                    "color": "#2ecc71"
+                },
+                {
+                    "id": 2,
+                    "name": "Groceries",
+                    "type": "expense",
+                    "color": "#e74c3c"
+                },
+                {
+                    "id": 3,
+                    "name": "Entertainment",
+                    "type": "expense",
+                    "color": "#f39c12"
+                }
+            ],
+            "transactions": [
+                {
+                    "id": 1,
+                    "name": "Grocery Shopping",
+                    "amount": -150,
+                    "category": "Groceries",
+                    "date": "2024-10-01"
+                },
+                {
+                    "id": 2,
+                    "name": "Salary",
+                    "amount": 2000,
+                    "category": "Salary",
+                    "date": "2024-10-05"
+                },
+                {
+                    "id": 3,
+                    "name": "Movie Night",
+                    "amount": -30,
+                    "category": "Entertainment",
+                    "date": "2024-10-10"
+                }
+            ]
         },
         {
             "id": 2,
-            "name": "Transport",
-            "type": "expense"
-        },
-        {
-            "id": 3,
-            "name": "Salary",
-            "type": "income"
-        },
-        {
-            "id": 4,
-            "name": "Entertainment",
-            "type": "expense"
-        },
-        {
-            "id": 5,
-            "name": "Movies",
-            "type": "expense"
-        },
-        {
-            "id": 6,
-            "name": "Sports",
-            "type": "expense"
+            "name": "Bob",
+            "password": "456",
+            "balance": 800.0,
+            "categories": [
+                {
+                    "id": 1,
+                    "name": "Freelance",
+                    "type": "income",
+                    "color": "#1abc9c"
+                },
+                {
+                    "id": 2,
+                    "name": "Dining Out",
+                    "type": "expense",
+                    "color": "#c0392b"
+                },
+                {
+                    "id": 3,
+                    "name": "Utilities",
+                    "type": "expense",
+                    "color": "#3498db"
+                }
+            ],
+            "transactions": [
+                {
+                    "id": 1,
+                    "name": "Freelance Project",
+                    "amount": 1200,
+                    "category": "Freelance",
+                    "date": "2024-10-01"
+                },
+                {
+                    "id": 2,
+                    "name": "Electric Bill",
+                    "amount": -100,
+                    "category": "Utilities",
+                    "date": "2024-10-07"
+                },
+                {
+                    "id": 3,
+                    "name": "Restaurant",
+                    "amount": -60,
+                    "category": "Dining Out",
+                    "date": "2024-10-15"
+                }
+            ]
         }
-    ],
-    "transactions": [
-        {
-            "id": 1,
-            "user_id": 1,
-            "category_id": 1,
-            "amount": 50.75,
-            "description": "Groceries",
-            "date": "2024-10-10"
-        },
-        {
-            "id": 2,
-            "user_id": 1,
-            "category_id": 2,
-            "amount": 20.00,
-            "description": "Bus fare",
-            "date": "2024-10-11"
-        },
-        {
-            "id": 3,
-            "user_id": 1,
-            "category_id": 3,
-            "amount": 1500.00,
-            "description": "October salary",
-            "date": "2024-10-01"
-        }
-    ],
-    "budget_goals": []
+    ]
 }
