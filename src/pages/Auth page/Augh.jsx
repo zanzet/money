@@ -4,12 +4,14 @@ import { Btn, Htag, Input } from '../../components';
 import { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { useHttp } from '../../hooks/useHttp';
+import { useNavigate } from 'react-router-dom';
 
 export const AughPage = () => {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const { login } = useAuth();
-    const { request } = useHttp()
+    const { request } = useHttp();
+    const navigate = useNavigate();
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -17,7 +19,11 @@ export const AughPage = () => {
         const userData = await request('http://localhost:3001/users')
 
         const user = userData.find(u => u.name === name && u.password === password)
-        login(user)
+        if (user) {
+            login(user)
+            navigate('/dashboard')
+        }
+
     }
 
     return (

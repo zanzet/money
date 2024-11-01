@@ -2,8 +2,13 @@ import { Link } from 'react-router-dom';
 import { Htag, Transaction } from '../../components';
 import style from './dashbord.module.scss'
 import React from 'react';
+import { useAuth } from '../../context/AuthContext';
 
-export const Dashboard = ({ balance, income, expenses, transactions }) => {
+export const Dashboard = () => {
+
+    const { user } = useAuth()
+    console.log(user)
+    const { balance, income, expenses, transactions } = user
     return (
         <div className={style.dashboard}>
             <Htag tag='h1'>Панель </Htag>

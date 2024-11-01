@@ -27,21 +27,12 @@ const App = () => {
           <Route
             path='/dashboard'
             element={
-              user ? (
-                <Dashboard
-                  balance={1429.25}
-                  income={1500.00}
-                  expenses={70.75}
-                  transactions={transactions}
-                />
-              ) : (
-                <Navigate to='/' />
-              )
+              user ? (<Dashboard/>) : (<Navigate to="/" />)
             }
           />
-            <Route path='/add' element={<AddTransaction transactions={transactions} />} />
-            <Route path='/expensecategories' element={<ExpenseCategories />} />
-            <Route path='*' element={<Page404 />} />
+          <Route path='/add' element={<AddTransaction transactions={transactions} />} />
+          <Route path='/expensecategories' element={<ExpenseCategories />} />
+          <Route path='*' element={<Page404 />} />
 
         </Routes>
 
