@@ -1,5 +1,6 @@
 export * from './Auth page/Augh'
 export * from './Dashboard page/Dashbord'
-export * from './Add Transaction/AddTransaction'
+export * from './Add Income/AddIncome'
 export * from './Expense categories/ExpenseCategories'
 export * from './404/404'
+export * from './Add Expense/AddExpense'

@@ -21,13 +21,13 @@ export const Dashboard = () => {
                     </div>
                 </Link>
 
-                <Link to='/add' className={style.summary__item}>
+                <Link to='/income' className={style.summary__item}>
                     <div>
                         <Htag tag='h2'>Прибуток</Htag>
                         <Htag tag='p'>${income.toFixed(2)}</Htag>
                     </div>
                 </Link>
-                <Link to="/add" className={style.summary__item}>
+                <Link to="/expense" className={style.summary__item}>
                     <div>
                         <Htag tag='h2'>Витрати</Htag>
                         <Htag tag='p'>${expenses.toFixed(2)}</Htag>
