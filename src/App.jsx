@@ -20,10 +20,10 @@ const App = () => {
           <Route
             path='/dashboard'
             element={
-              user ? (<Dashboard/>) : (<Navigate to="/" />)
+              user ? (<Dashboard />) : (<Navigate to="/" />)
             }
           />
-          <Route path='/income' element={<AddIncome/>} />
+          <Route path='/income' element={<AddIncome />} />
           <Route path='/expense' element={<AddExpense />} />
 
           <Route path='/expensecategories' element={<ExpenseCategories />} />

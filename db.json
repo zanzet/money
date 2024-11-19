@@ -31,6 +31,7 @@
                 {
                     "id": 1,
                     "name": "Grocery Shopping",
+                    "type": "expense",
                     "amount": -150,
                     "category": "Groceries",
                     "date": "2024-10-01"
@@ -38,6 +39,7 @@
                 {
                     "id": 2,
                     "name": "Salary",
+                    "type": "income",
                     "amount": 2000,
                     "category": "Salary",
                     "date": "2024-10-05"
@@ -45,6 +47,7 @@
                 {
                     "id": 3,
                     "name": "Movie Night",
+                    "type": "expense",
                     "amount": -30,
                     "category": "Entertainment",
                     "date": "2024-10-10"
@@ -80,6 +83,7 @@
                 {
                     "id": 1,
                     "name": "Freelance Project",
+                    "type": "income",
                     "amount": 1200,
                     "category": "Freelance",
                     "date": "2024-10-01"
@@ -87,6 +91,7 @@
                 {
                     "id": 2,
                     "name": "Electric Bill",
+                    "type": "expense",
                     "amount": -100,
                     "category": "Utilities",
                     "date": "2024-10-07"
@@ -94,6 +99,7 @@
                 {
                     "id": 3,
                     "name": "Restaurant",
+                    "type": "expense",
                     "amount": -60,
                     "category": "Dining Out",
                     "date": "2024-10-15"
