@@ -4,11 +4,10 @@ import { Htag } from '../index'
 
 export const Transaction = ({ flag }) => {
     const { user } = useAuth();
+
     const filterList = user.transactions.filter(el => {
         return el.type === flag
     })
-    console.log(filterList)
-
 
     return (
         <div className={style.dashboard__transactions}>

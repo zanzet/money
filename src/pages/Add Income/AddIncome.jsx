@@ -5,7 +5,7 @@ export const AddIncome = () => {
 
     return (
         <>
-            <FormOption />
+            {/* <FormOption /> */}
             <Transaction flag='income' />
         </>
     )

@@ -11,7 +11,7 @@ export const Header = () => {
     return (
         <header className={style.header}>
             <div className={style.header__h1}>
-                <Htag tag='h1'>Вітаю {user?.name ? user.name : 'Юзер'}</Htag>
+                <Htag tag='h1'>Вітаю {user?.name ? user.name : ''}</Htag>
             </div>
             <div className={style.header__wrapp}>
                 <ul>

@@ -15,8 +15,11 @@ const App = () => {
       <div className='app'>
         <Header />
         <Routes>
-
-          <Route path='/' element={<AughPage />} />
+          
+          <Route
+            path="/"
+            element={user ? <Navigate to="/dashboard" replace /> : <AughPage />}
+          />
           <Route
             path='/dashboard'
             element={

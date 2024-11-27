@@ -3,9 +3,10 @@
 
 }
 
-form {
+.form__transaction {
     display: flex;
-    max-width: 600px;
+    margin: 0 auto;
+    width: 825px;
     justify-content: space-between;
 }
 

@@ -4,7 +4,7 @@ import { FormOption, Transaction } from '../../components'
 export const AddExpense = () => {
     return (
         <>
-            <FormOption />
+            {/* <FormOption /> */}
             <Transaction flag='expense' />
         </>
     )
