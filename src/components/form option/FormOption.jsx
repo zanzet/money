@@ -12,6 +12,7 @@ export const FormOption = () => {
     const [nameOperation, setNameOperation] = useState('')
     const [prise, setPrice] = useState('');
     const [transactionValue, setTransactionValue] = useState('')
+    const [typeOperation, setTypeOperation] = useState('')
 
     const optionList = user.categories.map(el => {
         return (
@@ -22,29 +23,49 @@ export const FormOption = () => {
         )
     })
 
-    const onLoadTransaction = async (e) => {
+    const onLoadTransaction = (e) => {
         e.preventDefault()
 
         const date = new Date();
         const formattedDate = date.toISOString().split('T')[0];
 
         const transaction = {
-            "id": uuidv4(),
-            "name": nameOperation,
-            "type": transactionValue,
-            "amount": transactionValue === 'income' ? parseInt(prise) : parseInt("-" + prise),
-            "category": "Groceries",
-            "date": formattedDate
+            id: uuidv4(),
+            name: nameOperation,
+            type: typeOperation,
+            amount: typeOperation === 'income' ? parseInt(prise) : parseInt("-" + prise),
+            category: transactionValue,
+            date: formattedDate
         }
-        user.transactions.push(transaction)
-        login(user)
-        request(`http://localhost:3001/users/${user.id}`, 'PATCH', JSON.stringify(user))
+
+        let updatedBalance = user.balance + (typeOperation === 'income' ? parseInt(prise) : -parseInt(prise));
+        let newIncome;
+        let newExpenses;
+        if (typeOperation === 'income') {
+            newIncome = user.income + transaction.amount
+        }
+        if (typeOperation === 'expense') {
+            newExpenses = user.expenses + Math.abs(transaction.amount)
+        }
+
+        const updatedUser = {
+            ...user,
+            expenses: newExpenses ? newExpenses : user.expenses,
+            income: newIncome ? newIncome : user.income,
+            balance: updatedBalance,
+            transactions: [...user.transactions, transaction],
+        };
+        
+        login(updatedUser)
+
+        request(`http://localhost:3001/users/${user.id}`, 'PATCH', JSON.stringify(updatedUser))
             .then(res => console.log(res))
             .catch(err => console.log(err))
 
         setNameOperation('')
         setPrice('')
         setTransactionValue('')
+        setTypeOperation('')
 
     }
 
@@ -58,13 +79,24 @@ export const FormOption = () => {
                     value={nameOperation}
                     onChange={e => setNameOperation(e.target.value)}
                     required />
-                <select onChange={e => setTransactionValue(e.target.value)} className={style.select} required>
-                    <option key={3} disabled selected>Type operation</option>
+                <select
+                    onChange={e => {
+                        const selectedOption = user.categories.find(el => el.name === e.target.value);
+                        setTransactionValue(e.target.value)
+                        setTypeOperation(selectedOption?.type || '')
+                    }}
+                    className={style.select}
+                    value={transactionValue}
+                    required>
+                    <option value="" disabled hidden>
+                        Выберіть категорію
+                    </option>
                     {optionList}
                 </select>
                 <Input
                     type='number'
                     name='number'
+                    value={prise}
                     placeholder='Введіть суму'
                     onChange={e => setPrice(e.target.value)} required />
                 <Btn className={style.btn}>Відправити</Btn>

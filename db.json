@@ -4,9 +4,9 @@
       "id": "1",
       "name": "Alice",
       "password": "123",
-      "balance": 1820,
-      "income": 2000,
-      "expenses": 180,
+      "balance": 80418,
+      "income": 112551,
+      "expenses": 44786,
       "categories": [
         {
           "id": 1,
@@ -29,28 +29,100 @@
       ],
       "transactions": [
         {
-          "id": 1,
-          "name": "Grocery Shopping",
+          "id": "f3b34284-3742-41d8-bc87-18d41824aa07",
+          "name": "kjghnj",
           "type": "expense",
-          "amount": -150,
+          "amount": -1551,
           "category": "Groceries",
-          "date": "2024-10-01"
+          "date": "2024-11-27"
         },
         {
-          "id": 2,
-          "name": "Salary",
-          "type": "income",
-          "amount": 2000,
-          "category": "Salary",
-          "date": "2024-10-05"
-        },
-        {
-          "id": 3,
-          "name": "Movie Night",
+          "id": "46be9785-632b-4103-ae64-d418a51eccab",
+          "name": "fdvdbcv",
           "type": "expense",
-          "amount": -30,
+          "amount": -10000,
           "category": "Entertainment",
-          "date": "2024-10-10"
+          "date": "2024-11-27"
+        },
+        {
+          "id": "10ba7233-9032-4404-84a1-1d1e8f144a68",
+          "name": "Андрей",
+          "type": "expense",
+          "amount": -1551,
+          "category": "Groceries",
+          "date": "2024-11-27"
+        },
+        {
+          "id": "6895948e-4c8e-4720-8ecf-b92edc9f097e",
+          "name": "Андрей",
+          "type": "income",
+          "amount": 125,
+          "category": "Salary",
+          "date": "2024-11-27"
+        },
+        {
+          "id": "ab593a64-1318-4d7a-b4ec-90c5b40941d3",
+          "name": "fdvdbcv",
+          "type": "income",
+          "amount": 1551,
+          "category": "Salary",
+          "date": "2024-11-27"
+        },
+        {
+          "id": "90ef9692-64f0-4c25-8f8b-d802503fa2e7",
+          "name": "fdvdbcv",
+          "type": "expense",
+          "amount": -1551,
+          "category": "Groceries",
+          "date": "2024-11-27"
+        },
+        {
+          "id": "c991a8d0-aa2d-4022-bfa9-aa50f96010ec",
+          "name": "kjghnj",
+          "type": "expense",
+          "amount": -1551,
+          "category": "Groceries",
+          "date": "2024-11-27"
+        },
+        {
+          "id": "b12061be-9a0f-48e9-8c74-35c6c74208d5",
+          "name": "fdvdbcv",
+          "type": "income",
+          "amount": 100000,
+          "category": "Salary",
+          "date": "2024-11-27"
+        },
+        {
+          "id": "94bd2466-1218-4567-b88b-4eec81eaf967",
+          "name": "kjghnj",
+          "type": "income",
+          "amount": 10000,
+          "category": "Salary",
+          "date": "2024-11-28"
+        },
+        {
+          "id": "26b00215-cb07-426c-bc0e-36d8f88dac73",
+          "name": "kjghnj",
+          "type": "income",
+          "amount": 1000,
+          "category": "Salary",
+          "date": "2024-11-28"
+        },
+        {
+          "id": "e257e713-3a5e-47b7-9233-a30776a59570",
+          "name": "kjghnj",
+          "type": "expense",
+          "amount": -10000,
+          "category": "Groceries",
+          "date": "2024-11-28"
+        },
+        {
+          "id": "203e8b3f-f3c9-46ab-9b6d-7ba8a7308efc",
+          "name": "kjghnj",
+          "type": "expense",
+          "amount": -10000,
+          "category": "Groceries",
+          "date": "2024-11-28"
         }
       ]
     },

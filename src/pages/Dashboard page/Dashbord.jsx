@@ -1,14 +1,16 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FormOption, Htag, Transaction } from '../../components';
 import style from './dashbord.module.scss'
 import React from 'react';
 import { useAuth } from '../../context/AuthContext';
+import { Graphs } from '../../components/graphs/graphs';
 
 export const Dashboard = () => {
 
-    const { user } = useAuth()
-    
-    const { balance, income, expenses, transactions } = user
+    const { user } = useAuth();
+    const { balance, income, expenses } = user;
+    console.log(expenses)
     return (
         <div className={style.dashboard}>
             <Htag tag='h1'>Панель </Htag>
@@ -36,9 +38,11 @@ export const Dashboard = () => {
 
             </div>
 
-            <FormOption/>
+            <FormOption />
 
-            <Transaction transactions={transactions} />
+            <Transaction />
+
+            <Graphs />
         </div>
     );
 };
